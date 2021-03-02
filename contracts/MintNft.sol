@@ -73,7 +73,7 @@ contract MintNft is ERC721, Ownable {
         string memory _tokenURI
     ) public {
         require(
-            character[tokenId1].level && character[tokenId2].level == 3,
+            character[tokenId1].level == 3 && character[tokenId2].level == 3,
             "Character not max level, cannot breed"
         );
         printUniqueAsset(msg.sender, _tokenURI);

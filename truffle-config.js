@@ -19,7 +19,7 @@ module.exports = {
     },
   },
 
-  contracts_build_directory: path.join(__dirname, "client/src/contracts"),
+  contracts_build_directory: path.join(__dirname, "frontend/src/contracts"),
   networks: {
     develop: {
       port: 8545,
@@ -32,7 +32,7 @@ module.exports = {
           process.env.ALCHEMY_URL
         ),
       network_id: 4, // Ropsten's id
-      gas: 3100000, // Ropsten has a lower block limit than mainnet
+      gas: 4600000, // Ropsten has a lower block limit than mainnet
       confirmations: 2, // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
