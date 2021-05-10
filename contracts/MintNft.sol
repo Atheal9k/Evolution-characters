@@ -32,7 +32,7 @@ contract MintNft is ERC721, Ownable {
         uint256 _tokenId = tokenId;
         tokenId++;
         _safeMint(to, _tokenId);
-        _setTokenURI(tokenId, _tokenURI);
+        _setTokenURI(_tokenId, _tokenURI);
         character[_tokenId] = Character(
             1,
             block.timestamp + cooldownForEvolutionTime1
